@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    link(href='https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css', rel='stylesheet')
+
+  body
+    form.bg-white.shadow-md.rounded.px-8.pt-6.pb-8.max-w-md.mx-auto(action='/', method='POST')
+      .w-full.bg-indigo-lightest.container.mx-auto.px-4
+        .text-center.mt-4
+          label.block.text-grey-darker.text-xl.font-bold.mb-2.mt-4
+            | Address Locator
+        .mb-3
+          label.block.text-grey-darker.text-sm.font-bold.mb-2
+            | Enter Address
+          textarea#address.shadow.appearance-none.border.rounded.w-full.py-2.px-3.text-grey-darker(value='', type='text', placeholder='Masukkan Alamat', name="address")=address
+        div
+          button#getCords.bg-blue.text-white.font-bold.py-2.px-4.rounded(class='hover:bg-blue-dark', type='submit')
+            | Submit
+        .mt-4
+          label.block.text-grey-darker.text-sm.font-bold.mb-2
+            | Longitude
+          textarea#long.shadow.appearance-none.border.rounded.w-full.py-2.px-3.text-grey-darker(value='', placeholder='Longitude' name="long")=long
+        .mt-4
+          label.block.text-grey-darker.text-sm.font-bold.mb-2
+            | Latitude
+          textarea#lat.shadow.appearance-none.border.rounded.w-full.py-2.px-3.text-grey-darker(value='', placeholder='Latitude' name = "lat")=lat
+        p.text-center.text-grey.text-xs.mt-4
+          | ©2018 Azma.
